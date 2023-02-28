@@ -10,7 +10,7 @@ dbs = db_session.create_session()
 
 jobs = Jobs()
 user = dbs.query(User).filter(User.position == 'captain').first()
-jobs.team_leader = user.id
+jobs.team_leader = user.name + " " + user.surname
 jobs.job = 'deployment of residential modules 1 and 2'
 jobs.work_size = 15
 jobs.collaborators = '2, 3'
